@@ -467,16 +467,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .shadow-2xl {
@@ -485,23 +477,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-indigo-300 {
-  --tw-shadow-color: #a5b4fc;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-indigo-400 {
   --tw-shadow-color: #818cf8;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-indigo-500 {
-  --tw-shadow-color: #6366f1;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-indigo-600 {
-  --tw-shadow-color: #4f46e5;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
