@@ -1,6 +1,6 @@
 import { Link } from "remix";
 
-export default function Index() {
+function StarWarRobots() {
   return (
     <div
       className={"flex flex-wrap"}
@@ -42,4 +42,8 @@ export default function Index() {
       </Link>
     </div>
   );
+}
+
+export default function Index() {
+  return <StarWarRobots />;
 }

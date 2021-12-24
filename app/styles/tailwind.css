@@ -440,6 +440,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }

@@ -1,4 +1,4 @@
-import { Form, json, useActionData, useSearchParams } from "remix";
+import { json, useActionData, useSearchParams, redirect } from "remix";
 
 const badRequest = (data) => json(data, { status: 400 });
 
@@ -47,6 +47,10 @@ export const action = async ({ request }) => {
       // login to get the user
       // if there's no user, return the fields and a formError
       // if there is a user, create their session and redirect to /jokes
+      if (username === "rick" && password === "1234567") {
+        return redirect("/");
+      }
+
       return badRequest({
         fields,
         formError: "Not implemented",
@@ -78,8 +82,6 @@ export const action = async ({ request }) => {
   }
 };
 
-export let loader = async () => {};
-
 export default function Login() {
   const actionData = useActionData();
   const [searchParams] = useSearchParams();
@@ -97,10 +99,11 @@ export default function Login() {
         value={searchParams.get("redirectTo") ?? undefined}
       />
       <fieldset>
-        <legend>Login</legend>
+        <legend>登入</legend>
         <label className={"bg-blue-500"}>
+          {/*切換登入或註冊*/}
           <input
-            type="email"
+            type="radio"
             name="loginType"
             value="login"
             defaultChecked={
@@ -108,7 +111,6 @@ export default function Login() {
               actionData?.fields?.loginType === "login"
             }
           />{" "}
-          Email:
         </label>
       </fieldset>
       {/*帳號 包含錯誤提示*/}
