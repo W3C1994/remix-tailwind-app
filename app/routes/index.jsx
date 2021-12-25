@@ -1,5 +1,10 @@
 import { Link } from "remix";
 
+export function loader() {
+  console.log(process.env.SESSION_SECRET);
+  return {};
+}
+
 function StarWarRobots() {
   return (
     <div
