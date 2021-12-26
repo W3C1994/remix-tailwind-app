@@ -2,6 +2,15 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+本專案包含測試
+- 登入機制
+- 加入樣式庫
+- 預載入路由
+
+後端引用Api測試資料來源於
+- [robohash](https://robohash.org/)
+- [swapi](https://swapi.dev/)
+
 ## Development
 
 From your terminal:
