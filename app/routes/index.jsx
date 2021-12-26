@@ -2,7 +2,7 @@ import { Link } from "remix";
 import { requireUserId } from "~/utils/session.server";
 
 export const loader = async ({ request }) => {
-  const userId = await requireUserId(request);
+  const userId = await requireUserId(request, "/");
   console.log(process.env.SESSION_SECRET);
   console.log(userId);
   return {};
