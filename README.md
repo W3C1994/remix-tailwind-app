@@ -11,6 +11,9 @@
 - [robohash](https://robohash.org/)
 - [swapi](https://swapi.dev/)
 
+執行專案前
+請記得使用dotenv 創建環境檔案及設定參數
+
 ## Development
 
 From your terminal:
