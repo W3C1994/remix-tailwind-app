@@ -90,6 +90,7 @@ export const action = async ({ request }) => {
 
 export default function Login() {
   const actionData = useActionData();
+  //用來取得requireUserId中所建立的redirectTo並且在驗證成功後重新定向
   const [searchParams] = useSearchParams();
 
   return (

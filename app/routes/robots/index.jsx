@@ -1,7 +1,9 @@
 import { useLoaderData } from "remix";
 import { getPeople } from "~/routes/robots/getPeople";
+import { requireUserId } from "~/utils/session.server";
 
-export const loader = () => {
+export const loader = async ({ request }) => {
+  const userId = await requireUserId(request, "/robots");
   return getPeople();
 };
 
