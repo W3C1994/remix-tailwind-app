@@ -40,6 +40,7 @@ export const action = async ({ request }) => {
     username: validateUsername(username),
     password: validatePassword(password),
   };
+  //只要陣列中存在字串不為空值返回true
   if (Object.values(fieldErrors).some(Boolean))
     return badRequest({ fieldErrors, fields });
 
